@@ -78,23 +78,23 @@ fun AppCompatActivity.showFragmentToActivity(fragment: Fragment, visible: Boolea
     }
 }
 
-fun Fragment.switchFragment(fragment: Fragment, replace: Int = R.id.frameContent) {
-    val name: String = fragment.javaClass.name
-    val ft: FragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
-    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
-    ft.replace(replace, fragment)
-    ft.addToBackStack(name)
-    ft.commit()
-}
-
-fun AppCompatActivity.switchFragment(fragment: Fragment, replace: Int = R.id.frameContent) {
-    val name: String = fragment.javaClass.name
-    val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
-    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
-    ft.replace(replace, fragment)
-    ft.addToBackStack(name)
-    ft.commit()
-}
+//fun Fragment.switchFragment(fragment: Fragment, replace: Int = R.id.frameContent) {
+//    val name: String = fragment.javaClass.name
+//    val ft: FragmentTransaction = activity!!.supportFragmentManager.beginTransaction()
+//    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+//    ft.replace(replace, fragment)
+//    ft.addToBackStack(name)
+//    ft.commit()
+//}
+//
+//fun AppCompatActivity.switchFragment(fragment: Fragment, replace: Int = R.id.frameContent) {
+//    val name: String = fragment.javaClass.name
+//    val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+//    ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+//    ft.replace(replace, fragment)
+//    ft.addToBackStack(name)
+//    ft.commit()
+//}
 
 fun Fragment.replaceFragmentInFragment(fragment: Fragment, frameId: Int) {
     childFragmentManager.transact {

@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import com.example.contraintlayout.ClickViewPager
 import com.example.contraintlayout.R
 import com.example.contraintlayout.dialog.DialogPurchaseFragment
 import kotlinx.android.synthetic.main.fragment_confirm.*
@@ -24,8 +24,8 @@ class ConfirmFragment : BaseFragment() {
         btnConfirm.setOnClickListener {
             mDialogPurchaseFragment=DialogPurchaseFragment()
             mDialogPurchaseFragment?.show(activity?.supportFragmentManager, "")
+
         }
     }
-
 
 }

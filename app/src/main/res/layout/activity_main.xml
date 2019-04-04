@@ -2,21 +2,105 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:gravity="center"
         tools:context=".MainActivity">
 
     <include
             layout="@layout/include_toolbar"/>
 
-    <FrameLayout
-            android:id="@+id/frameContent"
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-    </FrameLayout>
+            android:layout_height="wrap_content">
 
 
+        <ImageButton
+                android:id="@+id/ibLocation"
+                android:background="@drawable/bg_icon_status_checked"
+                android:src="@drawable/ic_stat_mark"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                android:layout_marginLeft="@dimen/spacing_small"/>
+
+        <View
+                android:id="@+id/viewLeft"
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ibLocation"
+                app:layout_constraintRight_toLeftOf="@id/ibDollar"/>
+
+        <ImageButton
+                android:id="@+id/ibDollar"
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:src="@drawable/ic_stat_notifi_dollar26"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                app:layout_constraintLeft_toRightOf="@id/viewLeft"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/viewRight" />
+
+        <View
+                android:id="@+id/viewRight"
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/ibDollar"
+                app:layout_constraintRight_toLeftOf="@id/ibTick"/>
+
+        <ImageButton
+                android:id="@+id/ibTick"
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:src="@drawable/ic_stat_notifi_tick"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="@dimen/spacing_small"/>
+
+        <TextView
+                android:id="@+id/tvAddress"
+                android:text="Address"
+                android:textColor="@color/green_bright"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/spacing_tiny"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ibLocation"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+                android:id="@+id/tvPayment"
+                android:text="Payment"
+                android:layout_margin="@dimen/spacing_tiny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ibDollar"
+                app:layout_constraintLeft_toRightOf="@id/tvAddress"
+                app:layout_constraintRight_toLeftOf="@id/tvConfirm"/>
+
+        <TextView
+                android:id="@+id/tvConfirm"
+                android:text="Confirm"
+                android:layout_width="wrap_content"
+                android:layout_margin="@dimen/spacing_tiny"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ibTick"
+                app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpOrder"
+            android:layout_marginLeft="@dimen/spacing_tiny"
+            android:layout_marginRight="@dimen/spacing_tiny"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 </LinearLayout>
