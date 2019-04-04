@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:padding="@dimen/spacing_tiny"
+              tools:context=".purchase.UseInforFragment">
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_tiny"
+            android:gravity="center">
+
+        <ImageButton
+                android:background="@drawable/bg_icon_status_checked"
+                android:src="@drawable/ic_stat_mark"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"/>
+
+        <View
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="4dp"/>
+
+        <ImageButton
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:src="@drawable/ic_stat_notifi_dollar26"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"/>
+
+        <View
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="4dp"/>
+
+        <ImageButton
+                android:background="@drawable/bg_icon_status_uncheck"
+                android:src="@drawable/ic_stat_notifi_tick"
+                android:layout_width="@dimen/icon_size_normal"
+                android:layout_height="@dimen/icon_size_normal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="Address"
+                android:layout_weight="1"
+                android:textColor="@color/green_bright"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:gravity="center"
+                android:text="Payment"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        <TextView
+                android:text="Confirm"
+                android:gravity="end"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_giant"
+            android:layout_marginBottom="@dimen/spacing_tiny"
+            app:cardCornerRadius="@dimen/border_hard"
+            android:elevation="@dimen/spacing_tiny">
+
+        <LinearLayout
+                android:padding="@dimen/spacing_tiny"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:text="Delivery address"
+                    android:padding="@dimen/spacing_tiny"
+                    style="@style/TextTitleLarge"/>
+
+            <TextView
+                    android:text="Lê Văn Thắng"
+                    android:textColor="@color/navy_blue_dark"
+                    android:padding="@dimen/spacing_tiny"
+                    style="@style/TextContentLarge"/>
+
+            <TextView
+                    android:text="levanthang@gmail.com"
+                    android:textColor="@color/navy_blue_dark"
+                    android:padding="@dimen/spacing_tiny"
+                    style="@style/TextContentLarge"/>
+
+            <TextView
+                    android:text="098 569 0797"
+                    android:textColor="@color/navy_blue_dark"
+                    android:padding="@dimen/spacing_tiny"
+                    style="@style/TextContentLarge"/>
+
+            <TextView
+                    android:text="89 - Láng Hạ, Đống Đa, Hà Nội"
+                    android:textColor="@color/navy_blue_dark"
+                    android:padding="@dimen/spacing_tiny"
+                    style="@style/TextContentLarge"/>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+            android:text="Use other address"
+            android:padding="@dimen/spacing_tiny"
+            style="@style/TextTitleNormal"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_tiny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="Mobile"
+                android:layout_weight="1"
+                style="@style/TextTitleNormal"/>
+
+        <TextView
+                android:text="+84 955 896 9688"
+                android:gravity="end"
+                android:padding="@dimen/spacing_tiny"
+                android:layout_weight="1"
+                style="@style/TextContentLarge1"/>
+
+        <ImageView
+                android:paddingLeft="@dimen/spacing_tiny"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_close_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+            android:background="@drawable/bg_icon_status_uncheck"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/spacing_tiny"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="Address"
+                android:layout_weight="1"
+                style="@style/TextTitleNormal"/>
+
+        <TextView
+                android:text="208 Trung Hoà, Cầu Giấy, Hà Nội"
+                android:gravity="end"
+                android:padding="@dimen/spacing_tiny"
+                android:layout_weight="1"
+                style="@style/TextContentLarge1"/>
+
+        <ImageView
+                android:paddingLeft="@dimen/spacing_tiny"
+                android:layout_gravity="end|center"
+                android:src="@drawable/ic_close_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <View
+            android:background="@drawable/bg_icon_status_uncheck"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
+
+    <Button
+            android:id="@+id/btnUserInfor"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:background="@drawable/bg_round_navy_blue_state"
+            android:gravity="center"
+            android:text="Use information to order"
+            android:textColor="@color/yellow_bright"/>
+</LinearLayout>

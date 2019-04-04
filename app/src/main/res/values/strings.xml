@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Contraintlayout</string>
+    <string name="label_home">Home</string>
+    <string name="label_booking">Booking</string>
+    <string name="label_user">User</string>
+
+    <string name="label_suggestion">Suggestion</string>
+    <string name="label_list_coworking">List Coworking</string>
+    <string name="label_news_events">News and Events</string>
+    <string name="label_see_all">See all</string>
+    <string name="button_facebook">Sign up by Facebook</string>
+    <string name="label_08">08</string>
+    <string name="label_22">22</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
